@@ -10,7 +10,7 @@
         select id,user_name from user_info where id = #{id,jdbcType=VARCHAR}
     </select>
 
-	<select id="findAll" resultType="user">
-        select * from user
+	<select id="findAll" resultType="UserInfo">
+        select * from user_info
     </select>
 </mapper>
