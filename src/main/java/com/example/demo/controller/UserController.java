@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.UserInfo;
-import com.example.demo.service.UserInfoService;
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
 
 @RestController /**自动返回的是json格式数据，不是页面路径***/
-@RequestMapping("userInfo")
-public class UserInfoController {
+@RequestMapping("user")
+public class UserController {
 
 	@Autowired
-    private UserInfoService userInfoService;
+    private UserService userService;
 
     @PostMapping("/hello")
     public String hello(){
@@ -21,8 +21,8 @@ public class UserInfoController {
     }
 
     @PostMapping("/selectById")
-    public UserInfo selectById(Integer id){
-        return userInfoService.selectById(id);
+    public User selectById(Integer id){
+        return userService.selectById(id);
     }
 }
 

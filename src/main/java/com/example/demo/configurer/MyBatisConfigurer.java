@@ -20,7 +20,7 @@ public class MyBatisConfigurer {
       factory.setTypeAliasesPackage("com.example.demo.model"); //表示项目中model的存储路径；
       // 添加XML目录
       ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-      factory.setMapperLocations(resolver.getResources("classpath:mybatis/mapper/UserInfoMapper.xml")); //表示mapper.xml存储路径；
+      factory.setMapperLocations(resolver.getResources("classpath:mybatis/mapper/UserMapper.xml")); //表示mapper.xml存储路径；
       factory.setConfigLocation(resolver.getResource("classpath:mybatis/conf/sqlMapConfig.xml"));
       return factory.getObject();
    }
